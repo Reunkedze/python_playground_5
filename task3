@@ -1,0 +1,9 @@
+def initials (fio):
+    surname = fio.split(' ')[0]
+    name = fio.split(' ')[1]
+    patronymic = fio.split(' ')[2]
+
+    result = f'{surname[0].upper()}. {name[0].upper()}. {patronymic[0].upper()}.'
+    print(result)
+
+initials('Михаил Иванович Кузнецов')
