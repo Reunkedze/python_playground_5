@@ -1,0 +1,13 @@
+verifiable_string = input('Enter the string: ')
+most_frequent_letters = []
+dictionary = {}
+for i in verifiable_string:
+    if i in dictionary:
+        dictionary[i] += 1
+    else:
+        dictionary[i] = 1
+
+for i in dictionary.items():
+    if i[1] == max(dictionary.values()):
+        most_frequent_letters.append(i[0])
+print(most_frequent_letters)
