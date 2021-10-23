@@ -1,0 +1,22 @@
+def quiz():
+    from random import shuffle as shuffle
+    dictionary = {
+        'Russia': 'Moscow',
+        'Belarus': 'Minsk',
+        'Ukraine': 'Kiev'
+    }
+
+    random_keys_list = list(dictionary.keys())
+    shuffle(random_keys_list)
+    score = 0
+
+    for i in random_keys_list:
+        answer = input(f'Enter the capital of {i}: ')
+        if answer == dictionary[i]:
+            score += 1
+            print(f'Correct answer, your score {score}')
+        else:
+            print(f'Wrong answer, your score {score}')
+
+
+quiz()
